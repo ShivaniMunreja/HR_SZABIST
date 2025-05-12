@@ -25,14 +25,8 @@ app.get('/emp', async (req, res) => {
     }
 })
 
-app.get('/emp-count', async (req, res) => {
-    try{
-        const result = await pool.query('SELECT COUNT(*) FROM employees')
-        res.json(result.rows);
-    } catch(error) {
-        res.status(500).json({Error: error.message})
-    }
-})
+
+
 
 
 
